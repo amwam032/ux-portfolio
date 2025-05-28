@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audrey Mwamikazi - UX Designer Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --dark-color: #1f2937;
+            --light-color: #f8fafc;
+            --text-primary: #334155;
+            --text-secondary: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-primary) !important;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .hero-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: white;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body-custom {
+            padding: 2rem;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .case-study-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: white;
+            height: 300px;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .case-study-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .case-study-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .case-study-card:hover .case-study-overlay {
+            opacity: 1;
+        }
+
+        .coming-soon-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .case-study-content {
+            padding: 1.5rem;
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Audrey Mwamikazi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">How I Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Creating Digital Experiences That Matter</h1>
+                    <p class="hero-subtitle">I'm Audrey Mwamikazi, a passionate UX designer focused on crafting intuitive and beautiful digital experiences that solve real user problems.</p>
+                    <div class="hero-cta">
+                        <a href="#portfolio" class="btn btn-primary-custom me-3">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-custom">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-image">
+                        <i class="fas fa-user-circle" style="font-size: 15rem; color: rgba(255,255,255,0.1);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <div class="about-image">
+                        <i class="fas fa-user-circle" style="font-size: 12rem; color: var(--primary-color); opacity: 0.7;"></i>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="about-content">
+                        <h3 class="mb-4">Hello, I'm Audrey Mwamikazi</h3>
+                        <p class="lead mb-4">I'm a passionate UX designer with a love for creating meaningful digital experiences. Currently pursuing my studies in Computer science, I combine analytical thinking with creative problem-solving to design solutions that truly serve users.</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-heart text-primary me-2"></i>What I Love</h5>
+                                <ul class="list-unstyled">
+                                    <li>• User research and empathy mapping</li>
+                                    <li>• Minimalist design principles</li>
+                                    <li>• Accessibility and inclusive design</li>
+                                    <li>• Coffee and late-night design sessions</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-graduation-cap text-primary me-2"></i>Currently Learning</h5>
+                                <ul class="list-unstyled">
+                                    <li>• Advanced prototyping techniques</li>
+                                    <li>• Design systems and components</li>
+                                    <li>• User testing methodologies</li>
+                                    <li>• Front-end development skills</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work Section -->
+    <section id="work" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-white">How I Work</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card-custom">
+                        <div class="card-body-custom text-center">
+                            <div class="card-icon mx-auto">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="mb-4">Learning Journey</h4>
+                            <p class="mb-4">I'm currently taking a comprehensive UI Design course where I'm learning the fundamental principles of user-centered design. My approach combines theoretical knowledge with practical application.</p>
+                            
+                            <div class="row text-start">
+                                <div class="col-md-6">
+                                    <h6><i class="fas fa-book text-primary me-2"></i>Current Studies</h6>
+                                    <ul class="list-unstyled mb-4">
+                                        <li>• Visual Communication Principles</li>
+                                        <li>• User-Centered Design Process</li>
+                                        <li>• Heuristic Evaluation Methods</li>
+                                        <li>• Prototyping and Testing</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6><i class="fas fa-link text-primary me-2"></i>Learning Resources</h6>
+                                    <ul class="list-unstyled mb-4">
+                                        <li>• <a href="https://www.nngroup.com/" target="_blank" class="text-decoration-none">Nielsen Norman Group</a></li>
+                                        <li>• University Course Materials</li>
+                                        <li>• Design System Documentation</li>
+                                        <li>• UX Research Publications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <strong>Future Goal:</strong> As I progress through the semester, I'll be adding detailed information about my design process, including user research methodologies, wireframing techniques, and usability testing approaches.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Case Studies</h2>
+                    <p class="text-center text-muted mb-5">Here are some exciting projects I'll be working on throughout the semester</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <i class="fas fa-tooth"></i>
+                            <div class="case-study-overlay">
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5 class="mb-2">Service Site Design</h5>
+                            <p class="text-muted mb-0">Designing a user-friendly service website focusing on local business needs and customer experience.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <i class="fas fa-gamepad"></i>
+                            <div class="case-study-overlay">
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5 class="mb-2">Interactive Game Design</h5>
+                            <p class="text-muted mb-0">Creating an engaging small game with intuitive controls and delightful user interactions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="case-study-overlay">
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5 class="mb-2">E-Commerce Platform</h5>
+                            <p class="text-muted mb-0">Designing a seamless shopping experience with focus on conversion and user satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                            <i class="fas fa-chart-bar"></i>
+                            <div class="case-study-overlay">
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <h5 class="mb-2">Analytics Dashboard</h5>
+                            <p class="text-muted mb-0">Building a comprehensive data visualization platform for business intelligence insights.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-white">Let's Connect</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card-custom">
+                        <div class="card-body-custom text-center">
+                            <div class="card-icon mx-auto">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4 class="mb-4">Get In Touch</h4>
+                            <p class="mb-4">I'm always excited to connect with fellow designers, potential collaborators, or anyone interested in great design. Let's create something amazing together!</p>
+                            
+                            <div class="social-links mb-4">
+                                <a href="mailto:amwam032@uottawa.ca" title="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/audrey-mwamikazi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/amwam032" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://dribbble.com/amwam032" target="_blank" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+                            </div>
+                            
+                            <a href="mailto:amwam032@uottawa.ca" class="btn btn-primary-custom">Send Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>&copy; 2025 Audrey Mwamikazi. Designed with passion and attention to detail.</p>
+                    <p class="mb-0 text-muted">Built with Bootstrap 5 and modern web technologies</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-custom, .case-study-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
