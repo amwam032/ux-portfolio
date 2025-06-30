@@ -218,7 +218,10 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             background: white;
-            height: 300px;
+            min-height: 320px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
         }
 
         .case-study-card:hover {
@@ -228,14 +231,15 @@
 
         .case-study-image {
             width: 100%;
-            height: 200px;
+            height: 180px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 3rem;
+            font-size: 2.5rem;
             position: relative;
+            flex-shrink: 0;
         }
 
         .case-study-overlay {
@@ -267,6 +271,10 @@
 
         .case-study-content {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .footer {
@@ -313,6 +321,24 @@
             
             .section-title {
                 font-size: 2rem;
+            }
+            
+            .case-study-card {
+                margin-bottom: 2rem;
+            }
+            
+            .case-study-image {
+                height: 150px;
+                font-size: 2rem;
+            }
+            
+            .case-study-content {
+                padding: 1rem;
+            }
+            
+            .badge {
+                font-size: 0.75rem;
+                margin-bottom: 0.25rem;
             }
         }
     </style>
@@ -485,9 +511,11 @@
                         </div>
                     </div>
                     <div class="case-study-content">
-                        <h5 class="mb-2">Bright Smile Dental Website</h5>
-                        <p class="text-muted mb-2">Interactive dental clinic website with dual user journeys designed for different personas. Features React-based appointment booking system and responsive design.</p>
-                        <div class="mt-3">
+                        <div>
+                            <h5 class="mb-2">Bright Smile Dental Website</h5>
+                            <p class="text-muted mb-3">Interactive dental clinic website with dual user journeys designed for different personas. Features React-based appointment booking system and responsive design.</p>
+                        </div>
+                        <div class="mt-auto">
                             <span class="badge bg-primary me-1">React</span>
                             <span class="badge bg-primary me-1">UX Design</span>
                             <span class="badge bg-primary me-1">User Research</span>
@@ -499,15 +527,26 @@
             
             <div class="col-lg-6 col-md-6">
                 <div class="case-study-card">
-                    <div class="case-study-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <div class="case-study-image" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
                         <i class="fas fa-gamepad"></i>
                         <div class="case-study-overlay">
-                            <span class="coming-soon-badge">Coming Soon</span>
+                            <div class="text-center">
+                                <a href="https://simon-game-myqpcasdy-kaifs-projects-12cc6dc8.vercel.app/" target="_blank" class="btn btn-light me-2">Play Game</a>
+                                <a href="#" target="_blank" class="btn btn-outline-light">View Code</a>
+                            </div>
                         </div>
                     </div>
                     <div class="case-study-content">
-                        <h5 class="mb-2">Interactive Game Design</h5>
-                        <p class="text-muted mb-0">Creating an engaging small game with intuitive controls and delightful user interactions.</p>
+                        <div>
+                            <h5 class="mb-2">Simon Memory Game</h5>
+                            <p class="text-muted mb-3">Interactive memory game challenging players to repeat increasingly complex color sequences. Features responsive design, sound effects, and progressive difficulty levels.</p>
+                        </div>
+                        <div class="mt-auto">
+                            <span class="badge bg-success me-1">JavaScript</span>
+                            <span class="badge bg-success me-1">HTML5</span>
+                            <span class="badge bg-success me-1">CSS3</span>
+                            <span class="badge bg-success">Game Design</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -521,8 +560,10 @@
                         </div>
                     </div>
                     <div class="case-study-content">
-                        <h5 class="mb-2">E-Commerce Platform</h5>
-                        <p class="text-muted mb-0">Designing a seamless shopping experience with focus on conversion and user satisfaction.</p>
+                        <div>
+                            <h5 class="mb-2">E-Commerce Platform</h5>
+                            <p class="text-muted mb-0">Designing a seamless shopping experience with focus on conversion and user satisfaction.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -587,7 +628,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
