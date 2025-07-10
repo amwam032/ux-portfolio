@@ -556,13 +556,22 @@
                     <div class="case-study-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
                         <i class="fas fa-shopping-cart"></i>
                         <div class="case-study-overlay">
-                            <span class="coming-soon-badge">Coming Soon</span>
+                            <div class="text-center">
+                                <a href="https://young4-life-ecomm.vercel.app/" target="_blank" class="btn btn-light me-2">View Live</a>
+                                <a href="https://github.com/KaifAli27/Young4Life-Ecomm" target="_blank" class="btn btn-outline-light">View Code</a>
+                            </div>
                         </div>
                     </div>
                     <div class="case-study-content">
                         <div>
-                            <h5 class="mb-2">E-Commerce Platform</h5>
-                            <p class="text-muted mb-0">Designing a seamless shopping experience with focus on conversion and user satisfaction.</p>
+                            <h5 class="mb-2">Young4Life E-Commerce Platform</h5>
+                            <p class="text-muted mb-3">A comprehensive e-commerce solution designed with focus on user experience and conversion optimization. Features modern design patterns, intuitive navigation, and seamless checkout process.</p>
+                        </div>
+                        <div class="mt-auto">
+                            <span class="badge bg-info me-1">React</span>
+                            <span class="badge bg-info me-1">Vite</span>
+                            <span class="badge bg-info me-1">JavaScript</span>
+                            <span class="badge bg-info">UX Design</span>
                         </div>
                     </div>
                 </div>
@@ -628,7 +637,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -650,30 +659,4 @@
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.card-custom, .case-study-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+                navbar.style.
