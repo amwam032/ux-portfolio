@@ -269,6 +269,15 @@
             font-weight: 600;
         }
 
+        .completed-badge {
+            background: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
         .case-study-content {
             padding: 1.5rem;
             flex-grow: 1;
@@ -429,7 +438,7 @@
                                     <li>• Advanced prototyping techniques</li>
                                     <li>• Design systems and components</li>
                                     <li>• User testing methodologies</li>
-                                    <li>• Front-end development skills</li>
+                                    <li>• Data visualization principles</li>
                                 </ul>
                             </div>
                         </div>
@@ -455,7 +464,7 @@
                                 <i class="fas fa-graduation-cap"></i>
                             </div>
                             <h4 class="mb-4">Learning Journey</h4>
-                            <p class="mb-4">I'm currently taking a comprehensive UI Design course where I'm learning the fundamental principles of user-centered design. My approach combines theoretical knowledge with practical application.</p>
+                            <p class="mb-4">I'm currently taking a comprehensive UI Design course where I'm learning the fundamental principles of user-centered design. My approach combines theoretical knowledge with practical application through hands-on projects.</p>
                             
                             <div class="row text-start">
                                 <div class="col-md-6">
@@ -464,23 +473,23 @@
                                         <li>• Visual Communication Principles</li>
                                         <li>• User-Centered Design Process</li>
                                         <li>• Heuristic Evaluation Methods</li>
-                                        <li>• Prototyping and Testing</li>
+                                        <li>• Data Visualization & Internationalization</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
-                                    <h6><i class="fas fa-link text-primary me-2"></i>Learning Resources</h6>
+                                    <h6><i class="fas fa-tools text-primary me-2"></i>Design Process</h6>
                                     <ul class="list-unstyled mb-4">
-                                        <li>• <a href="https://www.nngroup.com/" target="_blank" class="text-decoration-none">Nielsen Norman Group</a></li>
-                                        <li>• University Course Materials</li>
-                                        <li>• Design System Documentation</li>
-                                        <li>• UX Research Publications</li>
+                                        <li>• Research & Persona Development</li>
+                                        <li>• Wireframing & Prototyping</li>
+                                        <li>• Usability Testing & Iteration</li>
+                                        <li>• Accessibility & Inclusive Design</li>
                                     </ul>
                                 </div>
                             </div>
                             
-                            <div class="alert alert-info">
-                                <i class="fas fa-info-circle me-2"></i>
-                                <strong>Future Goal:</strong> As I progress through the semester, I'll be adding detailed information about my design process, including user research methodologies, wireframing techniques, and usability testing approaches.
+                            <div class="alert alert-success">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong>Semester Progress:</strong> Completed 4 comprehensive case studies covering service websites, interactive games, e-commerce platforms, and data visualization dashboards.
                             </div>
                         </div>
                     </div>
@@ -491,109 +500,178 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="section-padding bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-title">Case Studies</h2>
-                <p class="text-center text-muted mb-5">Here are some exciting projects I've been working on throughout the semester</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Case Studies</h2>
+                    <p class="text-center text-muted mb-5">Here are the comprehensive projects I've completed throughout the semester, showcasing different aspects of UX design</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Case Study 1: Dental Website -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #2563eb, #06b6d4);">
+                            <i class="fas fa-tooth"></i>
+                            <div class="case-study-overlay">
+                                <div class="text-center">
+                                    <a href="https://brightsmile-seven.vercel.app/" target="_blank" class="btn btn-light me-2">View Live</a>
+                                    <a href="https://github.com/KaifAli27/brightsmile" target="_blank" class="btn btn-outline-light">View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="mb-0">Bright Smile Dental Website</h5>
+                                    <span class="completed-badge">Completed</span>
+                                </div>
+                                <p class="text-muted mb-3">Interactive dental clinic website with dual user journeys designed for different personas. Features React-based appointment booking system, responsive design, and comprehensive user research.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-1">React</span>
+                                <span class="badge bg-primary me-1">UX Research</span>
+                                <span class="badge bg-primary me-1">Personas</span>
+                                <span class="badge bg-primary">Service Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2: Simon Game -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+                            <i class="fas fa-gamepad"></i>
+                            <div class="case-study-overlay">
+                                <div class="text-center">
+                                    <a href="https://simon-game-myqpcasdy-kaifs-projects-12cc6dc8.vercel.app/" target="_blank" class="btn btn-light me-2">Play Game</a>
+                                    <a href="https://github.com/amwam032/simon-game" target="_blank" class="btn btn-outline-light">View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="mb-0">Simon Memory Game</h5>
+                                    <span class="completed-badge">Completed</span>
+                                </div>
+                                <p class="text-muted mb-3">Interactive memory game challenging players to repeat increasingly complex color sequences. Features responsive design, sound effects, progressive difficulty, and engaging user interactions.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <span class="badge bg-success me-1">JavaScript</span>
+                                <span class="badge bg-success me-1">HTML5</span>
+                                <span class="badge bg-success me-1">CSS3</span>
+                                <span class="badge bg-success">Game UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3: E-commerce Platform -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="case-study-overlay">
+                                <div class="text-center">
+                                    <a href="https://young4-life-ecomm.vercel.app/" target="_blank" class="btn btn-light me-2">View Live</a>
+                                    <a href="https://github.com/KaifAli27/Young4Life-Ecomm" target="_blank" class="btn btn-outline-light">View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="mb-0">Young4Life E-Commerce Platform</h5>
+                                    <span class="completed-badge">Completed</span>
+                                </div>
+                                <p class="text-muted mb-3">A comprehensive e-commerce solution designed with focus on user experience and conversion optimization. Features modern design patterns, intuitive navigation, and seamless checkout process.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <span class="badge bg-info me-1">React</span>
+                                <span class="badge bg-info me-1">Vite</span>
+                                <span class="badge bg-info me-1">JavaScript</span>
+                                <span class="badge bg-info">E-commerce UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 4: Food Price Dashboard -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="case-study-card">
+                        <div class="case-study-image" style="background: linear-gradient(135deg, #059669, #10b981);">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="case-study-overlay">
+                                <div class="text-center">
+                                    <a href="#" target="_blank" class="btn btn-light me-2">View Dashboard</a>
+                                    <a href="#" target="_blank" class="btn btn-outline-light">View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-study-content">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="mb-0">Canadian Food Price Dashboard</h5>
+                                    <span class="completed-badge">Completed</span>
+                                </div>
+                                <p class="text-muted mb-3">Interactive bilingual data visualization platform analyzing Canadian food price trends. Features multiple chart types, internationalization (EN/FR), and comprehensive user controls for data exploration.</p>
+                            </div>
+                            <div class="mt-auto">
+                                <span class="badge bg-success me-1">React</span>
+                                <span class="badge bg-success me-1">Recharts</span>
+                                <span class="badge bg-success me-1">i18n</span>
+                                <span class="badge bg-success">Data Viz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Summary -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card-custom">
+                        <div class="card-body-custom text-center">
+                            <h4 class="mb-4">Portfolio Highlights</h4>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="card-icon mx-auto mb-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h6>User-Centered Design</h6>
+                                    <p class="text-muted small">Research-driven approach with persona development and user journey mapping</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card-icon mx-auto mb-3">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <h6>Responsive Design</h6>
+                                    <p class="text-muted small">Mobile-first approach ensuring optimal experience across all devices</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card-icon mx-auto mb-3">
+                                        <i class="fas fa-universal-access"></i>
+                                    </div>
+                                    <h6>Accessibility Focus</h6>
+                                    <p class="text-muted small">WCAG compliance and inclusive design principles throughout all projects</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card-icon mx-auto mb-3">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <h6>Internationalization</h6>
+                                    <p class="text-muted small">Bilingual implementation with cultural considerations and localization best practices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row g-4">
-            <div class="col-lg-6 col-md-6">
-                <div class="case-study-card">
-                    <div class="case-study-image" style="background: linear-gradient(135deg, #2563eb, #06b6d4);">
-                        <i class="fas fa-tooth"></i>
-                        <div class="case-study-overlay">
-                            <div class="text-center">
-                                <a href="https://brightsmile-seven.vercel.app/" target="_blank" class="btn btn-light me-2">View Live</a>
-                                <a href="https://github.com/KaifAli27/brightsmile" target="_blank" class="btn btn-outline-light">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-study-content">
-                        <div>
-                            <h5 class="mb-2">Bright Smile Dental Website</h5>
-                            <p class="text-muted mb-3">Interactive dental clinic website with dual user journeys designed for different personas. Features React-based appointment booking system and responsive design.</p>
-                        </div>
-                        <div class="mt-auto">
-                            <span class="badge bg-primary me-1">React</span>
-                            <span class="badge bg-primary me-1">UX Design</span>
-                            <span class="badge bg-primary me-1">User Research</span>
-                            <span class="badge bg-primary">Responsive Design</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6 col-md-6">
-                <div class="case-study-card">
-                    <div class="case-study-image" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
-                        <i class="fas fa-gamepad"></i>
-                        <div class="case-study-overlay">
-                            <div class="text-center">
-                                <a href="https://simon-game-myqpcasdy-kaifs-projects-12cc6dc8.vercel.app/" target="_blank" class="btn btn-light me-2">Play Game</a>
-                                <a href="#" target="_blank" class="btn btn-outline-light">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-study-content">
-                        <div>
-                            <h5 class="mb-2">Simon Memory Game</h5>
-                            <p class="text-muted mb-3">Interactive memory game challenging players to repeat increasingly complex color sequences. Features responsive design, sound effects, and progressive difficulty levels.</p>
-                        </div>
-                        <div class="mt-auto">
-                            <span class="badge bg-success me-1">JavaScript</span>
-                            <span class="badge bg-success me-1">HTML5</span>
-                            <span class="badge bg-success me-1">CSS3</span>
-                            <span class="badge bg-success">Game Design</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6 col-md-6">
-                <div class="case-study-card">
-                    <div class="case-study-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-                        <i class="fas fa-shopping-cart"></i>
-                        <div class="case-study-overlay">
-                            <div class="text-center">
-                                <a href="https://young4-life-ecomm.vercel.app/" target="_blank" class="btn btn-light me-2">View Live</a>
-                                <a href="https://github.com/KaifAli27/Young4Life-Ecomm" target="_blank" class="btn btn-outline-light">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-study-content">
-                        <div>
-                            <h5 class="mb-2">Young4Life E-Commerce Platform</h5>
-                            <p class="text-muted mb-3">A comprehensive e-commerce solution designed with focus on user experience and conversion optimization. Features modern design patterns, intuitive navigation, and seamless checkout process.</p>
-                        </div>
-                        <div class="mt-auto">
-                            <span class="badge bg-info me-1">React</span>
-                            <span class="badge bg-info me-1">Vite</span>
-                            <span class="badge bg-info me-1">JavaScript</span>
-                            <span class="badge bg-info">UX Design</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6 col-md-6">
-                <div class="case-study-card">
-                    <div class="case-study-image" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
-                        <i class="fas fa-chart-bar"></i>
-                        <div class="case-study-overlay">
-                            <span class="coming-soon-badge">Coming Soon</span>
-                        </div>
-                    </div>
-                    <div class="case-study-content">
-                        <h5 class="mb-2">Analytics Dashboard</h5>
-                        <p class="text-muted mb-0">Building a comprehensive data visualization platform for business intelligence insights.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section-padding">
         <div class="container">
